@@ -1,0 +1,58 @@
+{
+  "name": "swaty/laravel-fallback-cache",
+  "description": "Allow Laravel cache connections to fallback to more stable drivers.",
+  "version": "1.0.0",
+  "keywords": [
+    "laravel",
+    "cache",
+    "fallback",
+    "driver"
+  ],
+  "homepage": "https://github.com/swaty007/laravel-fallback-cache",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Oleksii Lialiushko",
+      "email": "swaty0007@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^7.1.3 || ^8.0",
+    "illuminate/cache": "5.8.* || ^6.0 || ^7.0 || ^8.0 || ^9.0 || ^10.0 || ^11.0",
+    "illuminate/config": "5.8.* || ^6.0 || ^7.0 || ^8.0 || ^9.0 || ^10.0 || ^11.0",
+    "illuminate/support": "5.8.* || ^6.0 || ^7.0 || ^8.0 || ^9.0 || ^10.0 || ^11.0"
+  },
+  "require-dev": {
+    "illuminate/redis": "5.8.* || ^6.0 || ^7.0 || ^8.0 || ^9.0 || ^10.0 || ^11.0",
+    "laravel/framework": "^9.0 || ^10.0 || ^11.0",
+    "phpunit/phpunit": "^7.0 || ^8.0 || ^9.0 || ^10.0 || ^11.0",
+    "predis/predis": "^2.0",
+    "mockery/mockery": "^1.6.12",
+    "pestphp/pest": "^2.35",
+    "pestphp/pest-plugin-laravel": "^2.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Swaty\\CacheFallback\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Swaty\\CacheFallback\\Tests\\": "tests"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "optimize-autoloader": true
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Swaty\\CacheFallback\\CacheServiceProvider"
+      ]
+    }
+  }
+}
