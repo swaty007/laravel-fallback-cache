@@ -1,0 +1,4 @@
+.idea
+hydra
+vendor
+.phpunit.result.cache
