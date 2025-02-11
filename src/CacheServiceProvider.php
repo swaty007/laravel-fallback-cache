@@ -22,6 +22,7 @@ class CacheServiceProvider extends ServiceProvider implements DeferrableProvider
             return new FallbackCacheManager($app);
         });
     }
+
     /**
      * Register any events for your application.
      */
@@ -29,5 +30,4 @@ class CacheServiceProvider extends ServiceProvider implements DeferrableProvider
     {
         //
     }
-
 }

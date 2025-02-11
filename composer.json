@@ -1,7 +1,7 @@
 {
   "name": "swaty/laravel-fallback-cache",
   "description": "Allow Laravel cache connections to fallback to more stable drivers.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "keywords": [
     "laravel",
     "cache",
@@ -25,11 +25,12 @@
   "require-dev": {
     "illuminate/redis": "5.8.* || ^6.0 || ^7.0 || ^8.0 || ^9.0 || ^10.0 || ^11.0",
     "laravel/framework": "^9.0 || ^10.0 || ^11.0",
-    "phpunit/phpunit": "^7.0 || ^8.0 || ^9.0 || ^10.0 || ^11.0",
-    "predis/predis": "^2.0",
+    "laravel/pint": "^1.20",
     "mockery/mockery": "^1.6.12",
     "pestphp/pest": "^2.35",
-    "pestphp/pest-plugin-laravel": "^2.4"
+    "pestphp/pest-plugin-laravel": "^2.4",
+    "phpunit/phpunit": "^7.0 || ^8.0 || ^9.0 || ^10.0 || ^11.0",
+    "predis/predis": "^2.0"
   },
   "autoload": {
     "psr-4": {

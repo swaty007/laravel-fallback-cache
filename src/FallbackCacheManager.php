@@ -15,6 +15,7 @@ class FallbackCacheManager extends CacheManager
         if ($this->app->bound(DispatcherContract::class)) {
             $repository->setEventDispatcher($this->app[DispatcherContract::class]);
         }
+
         return $repository;
     }
 }

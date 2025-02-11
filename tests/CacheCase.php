@@ -16,7 +16,7 @@ abstract class CacheCase extends BaseTestCase
         config()->set('database.redis', [
             'redis' => [
                 'client' => 'predis',
-                'cache'  => [
+                'cache' => [
                     'host' => '127.0.0.1',
                     'port' => '6666', // invalid port
                 ],
@@ -26,7 +26,7 @@ abstract class CacheCase extends BaseTestCase
             'bad_driver' => [
                 'driver' => 'redis',
                 'connection' => 'cache',
-            ]
+            ],
         ]));
         config()->set('cache.default', 'bad_driver');
         config()->set('cache.fallback', 'array');

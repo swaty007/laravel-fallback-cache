@@ -17,6 +17,7 @@ class FallbackCacheRepository extends Repository
         parent::__construct($store);
         $this->fallback = new Repository($fallback);
     }
+
     private function callWithFallback($method, $parameters)
     {
         try {
@@ -34,7 +35,6 @@ class FallbackCacheRepository extends Repository
      *
      * @param  array|string  $key
      * @param  mixed  $default
-     * @return mixed
      */
     public function get($key, $default = null): mixed
     {
@@ -46,16 +46,12 @@ class FallbackCacheRepository extends Repository
      *
      * Items not found in the cache will have a null value.
      *
-     * @param  array  $keys
      * @return array
      */
     public function many(array $keys)
     {
         return $this->callWithFallback(__FUNCTION__, func_get_args());
     }
-
-
-
 
     /**
      * Store an item in the cache.
@@ -70,11 +66,9 @@ class FallbackCacheRepository extends Repository
         return $this->callWithFallback(__FUNCTION__, func_get_args());
     }
 
-
     /**
      * Store multiple items in the cache for a given number of seconds.
      *
-     * @param  array  $values
      * @param  \DateTimeInterface|\DateInterval|int|null  $ttl
      * @return bool
      */
@@ -82,7 +76,6 @@ class FallbackCacheRepository extends Repository
     {
         return $this->callWithFallback(__FUNCTION__, func_get_args());
     }
-
 
     /**
      * Store an item in the cache if the key does not exist.
@@ -133,7 +126,6 @@ class FallbackCacheRepository extends Repository
         return $this->callWithFallback(__FUNCTION__, func_get_args());
     }
 
-
     /**
      * Retrieve an item from the cache by key, refreshing it in the background if it is stale.
      *
@@ -161,11 +153,8 @@ class FallbackCacheRepository extends Repository
         return $this->callWithFallback(__FUNCTION__, func_get_args());
     }
 
-
     /**
      * {@inheritdoc}
-     *
-     * @return bool
      */
     public function clear(): bool
     {
@@ -184,7 +173,6 @@ class FallbackCacheRepository extends Repository
     {
         return $this->callWithFallback(__FUNCTION__, func_get_args());
     }
-
 
     public function __call($method, $parameters)
     {

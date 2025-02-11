@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-
 use Illuminate\Support\Facades\Cache;
 
 it('test Get', function () {
@@ -13,7 +12,7 @@ it('test Get', function () {
 });
 
 it('test Many', function () {
-    $data = ['a' => 'foo', 'b' => 'bar',];
+    $data = ['a' => 'foo', 'b' => 'bar'];
 
     Cache::store()->putMany($data, 10);
     $this->assertEquals($data, Cache::store()->many(array_keys($data)));
@@ -67,4 +66,3 @@ it('test Clear', function () {
     $this->assertTrue(Cache::store()->clear());
     $this->assertNull(Cache::store()->get('foo'));
 });
-
