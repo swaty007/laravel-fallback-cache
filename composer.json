@@ -1,7 +1,7 @@
 {
   "name": "swaty/laravel-fallback-cache",
   "description": "Allow Laravel cache connections to fallback to more stable drivers.",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "keywords": [
     "laravel",
     "cache",
